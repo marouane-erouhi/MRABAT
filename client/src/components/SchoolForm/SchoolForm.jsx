@@ -11,7 +11,6 @@ export default function SchoolForm() {
   const history = useHistory();
   const [failed, setFailed] = useState({ value: false, text: "" })
 
-  console.log(history.location.state)
   const historyState = history.location.state
 
   let initialValues = {

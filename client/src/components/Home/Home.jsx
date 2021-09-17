@@ -19,7 +19,7 @@ export default function Home() {
     fetchData()
   }, [])
 
-  const fetchData = async => {
+  const fetchData = e => {
     getAllSchools().then((data) => {
       console.log(data)
       setSchools(data.schools)
