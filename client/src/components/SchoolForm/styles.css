@@ -1,0 +1,43 @@
+form{
+  display: flex;
+  flex-direction: column;
+  /* max-width: 500px; */
+  text-align: left;
+}
+
+.new-school-form{
+  max-width: 750px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.submit-btn{
+  background-color: hsl(206, 54%, 56%);
+  border: none;
+  font-size: 24px;
+  width: max-content;
+  margin: 2.5rem auto 0 auto;
+  padding: 1rem;
+  border-radius: 12px;
+  transition: 0.15s;
+
+}
+
+.submit-btn:hover{
+  background-color: black;
+  color: aliceblue;
+}
+
+label{
+  margin-top: 0.7rem;
+}
+
+#img{
+  border: 1px solid black;
+  padding: 0.25rem;
+}
+
+.failed-popup{
+  background-color: red;
+  color: white;
+  }

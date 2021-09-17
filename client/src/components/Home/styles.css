@@ -1,0 +1,25 @@
+.all-schools{
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.create-button{
+  background-color: blueviolet;
+  font-size: 24px;
+  color: whitesmoke;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 12px;
+  transition: 0.15s;
+
+  display: block;
+
+  width: max-content;
+  margin: 3rem auto;
+}
+
+.create-button:hover{
+  color: black;
+  background-color: blue;
+}
