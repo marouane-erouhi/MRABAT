@@ -5,7 +5,9 @@ export default defineConfig({
   plugins: [reactRefresh()],
   server: {
     proxy: {
-      '/school': 'http://localhost:5000',
-    }
+      // '/school': 'http://localhost:5000',
+    },
+    host: true,
+    cors: true
   }
 })

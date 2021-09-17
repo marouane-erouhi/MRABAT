@@ -1,10 +1,9 @@
 const getAllSchools = async () => {
   const fetchOptions = {
     method: 'GET',
-    headers: { 'Content-Type': 'application/json' },
-    credentials: 'include',
+    headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
   };
-  return await fetch(`/school`, fetchOptions)
+  return await fetch(`http://35.232.171.144:5000/school`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
@@ -22,9 +21,10 @@ const addSchool = async (data) => {
 
   const fetchOptions = {
     method: 'POST',
+    headers: { 'Access-Control-Allow-Origin': '*' },
     body: fd,
   };
-  return await fetch(`http://localhost:5000/school`, fetchOptions)
+  return await fetch(`http://35.232.171.144:5000/school`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
@@ -46,9 +46,10 @@ const updateSchool = async (oldName, data, images) => {
 
   const fetchOptions = {
     method: 'PATCH',
+    headers: { 'Access-Control-Allow-Origin': '*' },
     body: fd,
   };
-  return await fetch(`http://localhost:5000/school`, fetchOptions)
+  return await fetch(`http://35.232.171.144:5000/school`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },

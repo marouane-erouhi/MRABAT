@@ -6,7 +6,7 @@ export default function School(data) {
   const { name, about, location, imageUrl, admission } = data
   const history = useHistory()
 
-  const editSchool = (e) => {
+  const editSchool = () => {
     history.push("/new-school", { ...data });
 
   }
