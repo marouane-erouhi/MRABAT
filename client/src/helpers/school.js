@@ -1,9 +1,11 @@
+const backend_url = 'http://3.142.46.234:5000/'
+
 const getAllSchools = async () => {
   const fetchOptions = {
     method: 'GET',
     headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
   };
-  return await fetch(`http://35.232.171.144:5000/school`, fetchOptions)
+  return await fetch(`${backend_url}/school`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
@@ -24,7 +26,7 @@ const addSchool = async (data) => {
     headers: { 'Access-Control-Allow-Origin': '*' },
     body: fd,
   };
-  return await fetch(`http://35.232.171.144:5000/school`, fetchOptions)
+  return await fetch(`${backend_url}/school`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
@@ -49,7 +51,7 @@ const updateSchool = async (oldName, data, images) => {
     headers: { 'Access-Control-Allow-Origin': '*' },
     body: fd,
   };
-  return await fetch(`http://35.232.171.144:5000/school`, fetchOptions)
+  return await fetch(`${backend_url}/school`, fetchOptions)
     .then((res) => res.json())
     .catch(() => ({
       error: { message: 'Unable to connect to server. Please try again' },
